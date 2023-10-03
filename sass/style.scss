@@ -1,0 +1,461 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@mixin chage_font($f-size, $color, $w) {
+    font-size: $f-size;
+    color: $color;
+    font-weight: $w;
+}
+
+@mixin chage_wh($wid, $heg) {
+    max-width: $wid;
+    height: $heg;
+}
+
+@mixin chage_btn($border, $rad, $bg-color, $pad) {
+    border: $border;
+    border-radius: $rad;
+    background-color: $bg-color;
+    padding: $pad;
+}
+
+%center {
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    @include chage_wh(100%, 57px);
+    @extend %center;
+    background: #0F1035;
+    justify-content: space-between;
+    padding: 0px 80px 0px 80px;
+
+    .navbar__ul {
+        gap: 20px;
+        @extend %center;
+
+        .navbar__li {
+            @include chage_font(14px, #fff, 700);
+            list-style: none;
+        }
+    }
+
+    .navbar__btn {
+        @include chage_btn(none, 5px, #666, 10px 20px);
+        @include chage_font(14px, #fff, 700)
+    }
+}
+
+nav {
+    .nav__contant {
+        @extend %center;
+        justify-content: space-between;
+        padding: 15px 210px 28px 80px;
+
+        .nav__img {
+            @include chage_wh(170px, 42px)
+        }
+
+        .nav__ul {
+            @extend %center;
+            gap: 30px;
+
+            .nav__li {
+                @include chage_font(14px, #000, 400);
+                list-style: none;
+            }
+        }
+    }
+}
+
+header {
+    .header__mini__div {
+        background-color: #D3F1F3;
+        @include chage_wh(100%, 62px);
+
+        .header__mini_h1 {
+            text-align: center;
+            padding-top: 22px;
+            @include chage_font(16px, black, 700);
+
+            .header__mini_sp {
+                @include chage_font(16px, black, 400);
+            }
+        }
+    }
+
+    .header__contant {
+        background: url(imges/header_1.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-width: 100%;
+        height: 100vh;
+
+        .header__h1 {
+            @include chage_font(40px, black, 700);
+            max-width: 488px;
+            margin: 0 auto;
+            font-family: sans-serif;
+            text-align: center;
+            padding-top: 33px;
+        }
+
+        .header__p {
+            @include chage_font(27px, black, 400);
+            font-family: sans-serif;
+            text-align: center;
+            padding-top: 12px;
+        }
+
+        .header__bottom {
+            @extend %center;
+            justify-content: center;
+            padding-top: 316px;
+            gap: 32px;
+
+            .header__int {
+                @include chage_btn(none, 3px, none, 13px 107px 13px 22px);
+            }
+
+            .header__btn {
+                @include chage_btn(none, 3px, #190083, 13px 27px);
+                color: #fff;
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+main {
+    .main__contant {
+        .main__h1 {
+            @include chage_font(40px, black, 700);
+            max-width: 488px;
+            margin: 0 auto;
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 92px;
+        }
+
+        .main__p {
+            @include chage_font(27px, black, 400);
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 53px;
+        }
+    }
+
+    .main__cons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 81px 150px;
+
+        .main__item {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            .main_1_img {
+                @include chage-wh(90px, 90px);
+            }
+
+            .main__h1 {
+                @include chage_font(22px, black, 700);
+                max-width: 488px;
+                margin: 0 auto;
+                font-family: sans-serif;
+                text-align: center;
+                margin-top: 35px;
+            }
+
+            .main__p_2 {
+                @include chage_font(18px, black, 400);
+                font-family: sans-serif;
+                text-align: center;
+                max-width: 204px;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .center__div {
+        display: flex;
+        justify-content: center;
+        margin-top: 80px;
+
+        .main__btn {
+            @include chage_btn(none, 3px, #190083, 13px 27px);
+            color: #fff;
+            font-size: 15px;
+        }
+    }
+}
+
+.figure__contant {
+    margin-top: 110px;
+    background: url(imges/figure__1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    height: 100vh;
+
+    .figure__h2 {
+        @include chage_font(40px, black, 700);
+        max-width: 488px;
+        margin: 0 auto;
+        font-family: sans-serif;
+        text-align: center;
+        padding-top: 111px;
+    }
+
+    .figure__position {
+        padding-top: 175px;
+
+        .bg__figure {
+            padding: 70px;
+            background: #fff;
+            @include chage_wh(70%, 256px);
+            @extend %center;
+            margin-left: 590px;
+            gap: 50px;
+
+            .figure__text {
+                @include chage_font(21px, black, 700);
+                line-height: 42px;
+                max-width: 486px;
+            }
+        }
+    }
+
+}
+
+section {
+    .section__contant {
+        .section__h1 {
+            @include chage_font(40px, black, 700);
+            max-width: 488px;
+            margin: 0 auto;
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 106px;
+        }
+
+        .section__p {
+            @include chage_font(27px, black, 400);
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 40px;
+        }
+    }
+
+    .section__imges {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 100px;
+
+        .section_img {
+            width: 120px;
+            height: 129px;
+        }
+    }
+
+    .center__btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 80px;
+
+        .section__btn {
+            @include chage_btn(none, 3px, #190083, 13px 27px);
+            color: #fff;
+            font-size: 15px;
+        }
+    }
+}
+
+.wrapper {
+    background-color: #F3E02B;
+    max-width: 100%;
+    height: 100vh;
+    margin-top: 100px;
+
+    .wrapper__contant {
+        .wrapper__h1 {
+            @include chage_font(40px, black, 700);
+            max-width: 488px;
+            margin: 0 auto;
+            font-family: sans-serif;
+            text-align: center;
+            padding-top: 106px;
+        }
+
+        .wrapper__p {
+            @include chage_font(27px, black, 400);
+            font-family: sans-serif;
+            text-align: center;
+            padding-top: 40px;
+        }
+    }
+
+    .wrapper__btn_c {
+        display: flex;
+        justify-content: center;
+        margin-top: 80px;
+
+        .wrapper__btn {
+            @include chage_btn(none, 3px, #190083, 13px 27px);
+            color: #fff;
+            font-size: 15px;
+        }
+    }
+}
+
+.item {
+    .item__h1 {
+        @include chage_font(40px, black, 700);
+        max-width: 488px;
+        margin: 0 auto;
+        font-family: sans-serif;
+        text-align: center;
+        margin-top: 106px;
+    }
+    .img_center{
+        margin: 120px ;
+    }
+}
+
+@media (min-width:990px) and (max-width:1200px) {
+    nav {
+        .nav__contant {
+            padding: 15px 90px 15px 80px;
+        }
+    }
+
+    figure {
+        .figure__position {
+            display: none;
+        }
+    }
+
+    section {
+        .section__imges {
+            display: none;
+        }
+    }
+}
+
+@media (min-width:769px) and (max-width:989px) {
+    nav {
+        .nav__contant {
+            padding: 15px 50px 15px 50px;
+        }
+    }
+
+    main {
+        .main__cons {
+            margin: 81px 50px;
+        }
+    }
+
+    figure {
+        .figure__position {
+            display: none;
+        }
+    }
+
+    section {
+        .section__imges {
+            display: none;
+        }
+    }
+}
+
+@media (min-width:447px) and (max-width:768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+        padding-top: 10px;
+        @include chage_wh(100%, 87px);
+    }
+
+    nav {
+        .nav__contant {
+            padding: 10px 0px;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+    main {
+        .main__cons {
+            flex-direction: column;
+            gap: 40px;
+        }
+    }
+
+    figure {
+        .figure__position {
+            display: none;
+        }
+    }
+
+    section {
+        .section__imges {
+            display: none;
+        }
+    }
+}
+
+@media (min-width:335px) and (max-width:446px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+        padding: 10px 5px 10px 5px;
+        @include chage_wh(100%, 87px);
+    }
+
+    nav {
+        display: none;
+    }
+
+    .header__bottom {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    main {
+        .main__cons {
+            flex-direction: column;
+            gap: 40px;
+
+        }
+    }
+
+    figure {
+        .figure__position {
+            display: none;
+        }
+    }
+
+    section {
+        .section__imges {
+            display: none;
+        }
+    }
+}
+
+@media (min-width:1px) and (max-width:335px) {
+    body {
+        display: none;
+    }
+}
